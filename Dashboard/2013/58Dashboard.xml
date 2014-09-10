@@ -1,0 +1,37 @@
+<xml version="1.0">
+<dashboard>
+	<widget field="Autonomous program" type="String Chooser" class="edu.wpi.first.smartdashboard.gui.elements.Chooser">
+		<location x="542" y="185"/>
+	</widget>
+	<widget field="X:" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="543" y="70"/>
+	</widget>
+	<widget field="Deck Angle" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="541" y="89"/>
+	</widget>
+	<widget field="Y:" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="542" y="48"/>
+		<height>20</height>
+	</widget>
+	<widget field="Y location:" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="542" y="117"/>
+	</widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.ConnectionIndicator">
+		<location x="553" y="5"/>
+	</static-widget>
+	<static-widget class="edu.wpi.first.smartdashboard.camera.WPICameraExtension">
+		<location x="0" y="0"/>
+		<width>541</width>
+		<height>371</height>
+		<property name="Camera IP Address" value="10.0.58.12"/>
+	</static-widget>
+</dashboard>
+<live-window>
+</live-window>
+	<hidden field="first.driverstation.senderrors"/>
+	<hidden field="Midpoint"/>
+	<hidden field="Slider 1"/>
+	<hidden field="Checkbox 2"/>
+	<hidden field="Checkbox 1"/>
+	<hidden field="X Location:"/>
+</xml>

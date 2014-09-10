@@ -1,0 +1,47 @@
+ public static void twoBall() {
+        double elapTime = totalTime.get();
+        //double distancewall = Driverstation.getDistance();
+        //System.out.println("Distance" + distancewall);
+        
+        
+//         if(elapTime < .1) {
+//                 hotGoal = Driverstation.hotGoal();
+//                  if (hotGoal = false) {
+//                delay = 5;
+//            }
+//            }
+//         
+      {
+        if (elapTime < 1.8) {
+        Motors.setBrakesDrive(true);
+        Motors.DriveBase.mecanumDrive_Polar(.6, 0, 0);
+        } else if (elapTime > 1.8 && elapTime < 1.9) {
+            Motors.DriveBase.mecanumDrive_Polar(.4,0, 0);
+            Motors.MakePaddleArmGo(0);
+            Motors.setBrakesDrive(true);
+        }  else if (elapTime > 1.9 && elapTime < 2.4) {
+            Motors.DriveBase.mecanumDrive_Polar(0, 0, 0);
+            Motors.setBrakesDrive(true);
+            System.out.println("Shooting");
+            Motors.MakePaddleArmGo(1);
+             Motors.DriveBase.mecanumDrive_Polar(0, 0, 0);
+        }
+        else if (elapTime > 2.4 && elapTime < 2.5)
+            Motors.MakePaddleArmGo(0);
+        else if (elapTime > 2.5 && elapTime < 5) {
+            Motors.SetBrakes(false);
+            Motors.Collect.set(Relay.Value.kReverse);
+        }
+        else if (elapTime > 5 && elapTime <5.8) {
+            Motors.MakePaddleArmGo(1);
+            Motors.Collect.set(Relay.Value.kOff);
+            Motors.SetBrakes(true);
+        }
+        else {
+            Motors.MakePaddleArmGo(0);
+            //Motors.SetBrakes(false);
+            Motors.setBrakesDrive(false);
+            Motors.DriveBase.mecanumDrive_Polar(0, 0, 0);
+
+        }
+        
